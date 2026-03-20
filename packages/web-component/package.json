@@ -1,0 +1,20 @@
+{
+  "name": "@capturetrue/web-component",
+  "version": "0.0.1",
+  "description": "A web component for capturing live photo, built with TypeScript and Web Components.",
+  "private": false,
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup index.ts --format esm,cjs --dts"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1"
+  }
+}
