@@ -118,16 +118,25 @@ class CaptureTrue extends HTMLElement {
           error.name === "NotAllowedError" ||
           error.name === "SecurityError"
         ) {
-          console.error("Camera access permanently blocked or denied by user.");
+          this.dispatchEvent(
+            new CustomEvent(`${this.EVENT_PREFIX}:error`, {
+              detail: { error },
+            })
+          );
         } else {
-          console.log(error);
-          console.error("An unexpected camera error occurred:", error.name);
+          this.dispatchEvent(
+            new CustomEvent(`${this.EVENT_PREFIX}:error`, {
+              detail: { error },
+            })
+          );
         }
       }
     } else {
-      // Fallback for older browsers
-      // Show a message to the user
-      console.error("getUserMedia is not supported by this browser.");
+      this.dispatchEvent(
+        new CustomEvent(`${this.EVENT_PREFIX}:error`, {
+          detail: { error: new Error("getUserMedia not supported") },
+        })
+      );
     }
   }
 
