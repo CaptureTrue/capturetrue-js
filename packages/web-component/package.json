@@ -1,6 +1,6 @@
 {
   "name": "@capturetrue/web-component",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A web component for capturing live photo, built with TypeScript and Web Components.",
   "private": false,
   "main": "dist/index.mjs",
