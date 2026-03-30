@@ -62,6 +62,9 @@ class CaptureTrue extends HTMLElement {
         .hidden {
           display: none;
         }
+        video {
+          width: 100%;  
+        }
       </style>
       <div class="wrapper">
         <button type="button" class="recordButton hidden"></button>
