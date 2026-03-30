@@ -12,9 +12,12 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup index.ts --format esm,cjs --dts"
+    "build": "tsup index.ts --format esm,cjs --dts",
+    "dev": "npm run build && yalc publish --push",
+    "dev:watch": "nodemon --watch 'src/**/*' --exec 'npm run dev'"
   },
   "devDependencies": {
+    "nodemon": "^3.1.14",
     "tsup": "^8.5.1"
   }
 }
