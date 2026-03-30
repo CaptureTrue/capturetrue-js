@@ -14,10 +14,31 @@
   "scripts": {
     "build": "tsup index.ts --format esm,cjs --dts",
     "dev": "npm run build && yalc publish --push",
-    "dev:watch": "nodemon --watch 'src/**/*' --exec 'npm run dev'"
+    "dev:watch": "nodemon --watch 'src/**/*' --exec 'npm run dev'",
+    "semantic-release": "semantic-release"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/capturetrue/capturetrue-js.git",
+    "directory": "packages/web-component"
+  },
+  "bugs": {
+    "url": "https://github.com/capturetrue/capturetrue-js/issues"
+  },
+  "homepage": "https://github.com/capturetrue/capturetrue-js/tree/main/packages/web-component#readme",
+  "keywords": [
+    "web-component",
+    "live-photo",
+    "capture",
+    "typescript"
+  ],
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
+    "@semantic-release/npm": "^13.1.5",
     "nodemon": "^3.1.14",
+    "semantic-release": "^25.0.3",
     "tsup": "^8.5.1"
   }
 }
